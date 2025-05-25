@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:perplexity_clone/pages/chat_page.dart';
 import 'package:perplexity_clone/theme/colors.dart';
 import 'pages/home_page.dart';
 
@@ -24,7 +25,9 @@ class MyApp extends StatelessWidget {
           ThemeData.dark().textTheme,
         ),
       ),
-      home: HomePage(),
+      home: ChatPage(
+        question: 'What is Ind vs Aus score today?',
+      ),
     );
   }
 }

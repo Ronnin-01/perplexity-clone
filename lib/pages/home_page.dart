@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:perplexity_clone/services/chat_web_service.dart';
 import 'package:perplexity_clone/theme/colors.dart';
 import 'package:perplexity_clone/widgets/search_section.dart';
 import 'package:perplexity_clone/widgets/side_bar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    ChatWebservice().connect();
+    super.initState();
+  }
+
+  String fullResponse = "";
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +34,7 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   child: SearchSection(),
                 ),
+
                 //footer
                 Container(
                   padding: EdgeInsets.symmetric(
