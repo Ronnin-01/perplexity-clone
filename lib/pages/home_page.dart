@@ -18,8 +18,6 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
-  String fullResponse = "";
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +32,6 @@ class _HomePageState extends State<HomePage> {
                 Expanded(
                   child: SearchSection(),
                 ),
-
                 //footer
                 Container(
                   padding: EdgeInsets.symmetric(

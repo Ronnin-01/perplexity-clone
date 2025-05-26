@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:perplexity_clone/pages/chat_page.dart';
 import 'package:perplexity_clone/theme/colors.dart';
 import 'pages/home_page.dart';
 
@@ -14,20 +13,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.background,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: AppColors.submitButton,
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          scaffoldBackgroundColor: AppColors.background,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: AppColors.submitButton,
+          ),
+          textTheme: GoogleFonts.interTextTheme(
+            ThemeData.dark().textTheme.copyWith(
+                  bodyMedium:
+                      TextStyle(fontSize: 15, color: AppColors.whiteColor),
+                ),
+          ),
         ),
-        textTheme: GoogleFonts.interTextTheme(
-          ThemeData.dark().textTheme,
-        ),
-      ),
-      home: ChatPage(
-        question: 'What is Ind vs Aus score today?',
-      ),
-    );
+        home: HomePage());
   }
 }

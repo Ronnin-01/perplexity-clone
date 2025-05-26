@@ -20,7 +20,7 @@ class SearchService:
                 {
                 "title": result.get("title", ""),
                 "url": result.get("url", ""),
-                "content": content,
+                "content": content or "",
                 }
             )
 

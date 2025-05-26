@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:perplexity_clone/theme/colors.dart';
 import 'package:perplexity_clone/widgets/answer_section.dart';
 import 'package:perplexity_clone/widgets/side_bar.dart';
 import 'package:perplexity_clone/widgets/sources_section.dart';
@@ -25,6 +26,7 @@ class ChatPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(24),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       question,
@@ -43,7 +45,11 @@ class ChatPage extends StatelessWidget {
                 ),
               ),
             ),
-          )
+          ),
+          Placeholder(
+            strokeWidth: 0,
+            color: AppColors.background,
+          ),
         ],
       ),
     );
